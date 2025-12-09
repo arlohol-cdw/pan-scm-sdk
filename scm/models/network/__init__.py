@@ -1,6 +1,26 @@
 """scm.models.network: Network-related models."""
 # scm/models/network/__init__.py
 
+from .ethernet_interface import (
+    ArpEntry,
+    DdnsConfig,
+    DhcpClient,
+    EthernetInterfaceBaseModel,
+    EthernetInterfaceCreateModel,
+    EthernetInterfaceResponseModel,
+    EthernetInterfaceUpdateModel,
+    Layer2,
+    Layer3,
+    LinkDuplex,
+    LinkSpeed,
+    LinkState,
+    PoE,
+    Pppoe,
+    PppoeAuthentication,
+    SendHostname,
+    StaticAddress,
+    Tap,
+)
 from .ike_crypto_profile import (
     DHGroup,
     EncryptionAlgorithm,
@@ -68,6 +88,25 @@ from .security_zone import (
 )
 
 __all__ = [
+    # Ethernet Interface
+    "EthernetInterfaceBaseModel",
+    "EthernetInterfaceCreateModel",
+    "EthernetInterfaceUpdateModel",
+    "EthernetInterfaceResponseModel",
+    "LinkSpeed",
+    "LinkDuplex",
+    "LinkState",
+    "PppoeAuthentication",
+    "PoE",
+    "SendHostname",
+    "DhcpClient",
+    "StaticAddress",
+    "Pppoe",
+    "ArpEntry",
+    "DdnsConfig",
+    "Tap",
+    "Layer2",
+    "Layer3",
     # IKE Crypto Profile
     "IKECryptoProfileCreateModel",
     "IKECryptoProfileUpdateModel",
